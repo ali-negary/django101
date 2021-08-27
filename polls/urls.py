@@ -1,7 +1,6 @@
 from django.urls import path
 from . import views
 
-
 app_name = 'polls'
 
 # for generic views we should use keys in the format: <int:pk>
