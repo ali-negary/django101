@@ -8,4 +8,4 @@ This is going to be my first Django project.
 - index created and improved.
 - detail created and improved.
 
-1:51':00"
+2:37':35"
