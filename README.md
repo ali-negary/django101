@@ -12,5 +12,8 @@ This is going to be my first Django project.
 - settings.py was updated with reading from file.
 - results, index, and details were implemented with 
 - TDD and tests.py
+- written some tests more view.py and model.py
 
-2:37':35"
+*note: if everything works fine, remove the commented line urls.py url patterns.*
+
+3:31':00"
