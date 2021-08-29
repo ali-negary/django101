@@ -1,0 +1,26 @@
+body {
+    background: white url("images/detail_background.jpg") no-repeat;
+    text-align: center;
+}
+
+legend {
+  color: pink;
+  text-align: center;
+}
+
+p {
+    color: lightskyblue;
+}
+
+label {
+  color: indianred;
+  text-align: center;
+}
+
+input[type=submit i] {
+    background-color: darkgreen;
+    color: white;
+    font-size: medium;
+    border-style: double;
+    border-color: palegreen;
+}

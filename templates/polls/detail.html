@@ -5,19 +5,28 @@
     <title>Polls: Choices</title>
 </head>
 <body>
+{% load static %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'polls/detail_style.css' %}">
+
+
 <form action="{% url 'polls:vote' question.id %}" method="post">
     {% csrf_token %}
     <fieldset>
-        <legend><h1>{{ question.question_text }}</h1></legend>
-        {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+        <legend>
+            <h1>{{ question.question_text }}</h1>
+        </legend>
+        {% if error_message %}
+            <h3><p><strong>{{ error_message }}</strong></p></h3>
+        {% endif %}
         {% for choice in question.choice_set.all %}
-            <h3>
+            <h2>
                 <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}">
-                <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
-            </h3>
+                <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label>
+            </h2>
         {% endfor %}
+        <input type="submit" value="Vote" style="width: 45px; height: 35px;">
     </fieldset>
-    <h3><input type="submit" value="Vote"></h3>
 </form>
 </body>
 </html>
